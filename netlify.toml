@@ -1,0 +1,34 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# BCSO — Bahamas Compliance & Safety Oversight Ltd.
+# Netlify deployment configuration
+# ─────────────────────────────────────────────────────────────────────────────
+
+[build]
+  command   = "npm run build"
+  publish   = ".next"
+
+[build.environment]
+  # Node version — must be 20+ for Next.js 16
+  NODE_VERSION = "20"
+
+# Netlify's OpenNext adapter handles SSR, API routes and Middleware automatically.
+# The plugin below registers it.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Environment variables — set REAL values in the Netlify dashboard UI,
+# never commit secrets here.
+# Listed here as documentation only.
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Required:
+#   NEON_DATABASE_URL   — Neon pooled connection string
+#                         postgresql://user:pass@ep-xxx.neon.tech/neondb?sslmode=require
+#
+# Optional (SMTP email dispatch from the dashboard):
+#   SMTP_HOST           — e.g. smtp.sendgrid.net
+#   SMTP_PORT           — 587
+#   SMTP_USER           — API key username
+#   SMTP_PASS           — API key or password
+#   SMTP_FROM           — "BCSO <noreply@yourdomain.bs>"

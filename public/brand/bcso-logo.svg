@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 360" fill="none">
+  <defs>
+    <linearGradient id="sea" x1="42" y1="256" x2="268" y2="168" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F97316"/>
+      <stop offset="1" stop-color="#1C2128"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="134" y1="112" x2="430" y2="129" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EAB308" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#FCEAB0" stop-opacity="0.12"/>
+    </linearGradient>
+  </defs>
+  <rect width="1180" height="360" rx="24" fill="white"/>
+  <path d="M56 260c-22-27-34-62-34-100 0-87 71-158 158-158 38 0 74 14 101 36-33-30-76-48-124-48C70-10 0 60 0 147c0 57 30 107 75 136l-19-23Z" fill="#1C2128" opacity="0.08"/>
+  <path d="M42 266c-21-28-33-63-33-101 0-83 67-150 150-150 36 0 69 13 95 35" stroke="#1C2128" stroke-width="14" stroke-linecap="round"/>
+  <path d="M152 109 430 129 151 150V109Z" fill="url(#beam)"/>
+  <path d="M102 261 118 102h49l18 159h-83Z" fill="#1C2128"/>
+  <path d="M117 102h53L144 79l-27 23Z" fill="#1C2128"/>
+  <path d="M143 79V64" stroke="#1C2128" stroke-width="5" stroke-linecap="round"/>
+  <path d="M114 132h60M111 157h67" stroke="#fff" stroke-width="7" opacity="0.98"/>
+  <path d="M108 187c28-21 57-24 86-9l-4 39c-29-14-56-10-82 10v-40Z" fill="#fff"/>
+  <path d="M93 235c44-18 93-11 144 20" stroke="#F97316" stroke-width="13" stroke-linecap="round"/>
+  <path d="M81 260c57-26 118-17 178 25" stroke="#fff" stroke-width="13" stroke-linecap="round"/>
+  <path d="M74 286c70-29 141-20 208 27" stroke="#1C2128" stroke-width="13" stroke-linecap="round"/>
+  <path d="M223 151c14 6 23 15 28 28M251 180c9 2 17 8 20 16M236 199c11 3 20 11 24 21M199 177c8 9 12 19 14 31" stroke="#F97316" stroke-width="5" stroke-linecap="round"/>
+  <path d="m295 217 47 15v34c0 31-22 53-47 64-26-11-48-33-48-64v-34l48-15Z" fill="#fff" stroke="#1C2128" stroke-width="9"/>
+  <path d="m275 266 16 18 29-40" stroke="#F97316" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="414" y="182" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="124" letter-spacing="2" fill="#1C2128">BC</text>
+  <text x="670" y="182" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="124" letter-spacing="2" fill="#F97316">S</text>
+  <text x="747" y="182" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="124" letter-spacing="2" fill="#1C2128">O</text>
+  <path d="M418 214H1112" stroke="#F97316" stroke-width="4"/>
+  <text x="418" y="273" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" letter-spacing="2.8" fill="#1C2128">BAHAMAS COMPLIANCE &amp;</text>
+  <text x="418" y="315" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" letter-spacing="2.8" fill="#1C2128">SAFETY OVERSIGHT LTD.</text>
+  <path d="M418 334H606" stroke="#F97316" stroke-width="4"/>
+  <text x="629" y="348" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" letter-spacing="4" fill="#F97316">(BCSO)</text>
+  <path d="M842 334H1112" stroke="#F97316" stroke-width="4"/>
+</svg>
