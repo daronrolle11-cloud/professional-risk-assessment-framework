@@ -1,0 +1,342 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0B0F13;
+  --bg-2: #161B22;
+  --panel: #1C2128;
+  --panel-2: #22272E;
+  --line: rgba(249, 115, 22, 0.12);
+  --ink: #F0F3F5;
+  --muted: #8B949E;
+  --accent: #F97316;
+  --accent-2: #EAB308;
+  --brand-navy: #1C2128;
+  --brand-navy-deep: #0B0F13;
+  --brand-teal: #F97316;
+  --brand-teal-soft: #FB923C;
+  --brand-gold: #EAB308;
+  --brand-gold-soft: #FACC15;
+  --low: #22C55E;
+  --mod: #F59E0B;
+  --high: #F97316;
+  --extreme: #EF4444;
+  --paper: #FDFCF9;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: 
+    radial-gradient(circle at top center, rgba(249, 115, 22, 0.04), transparent 40%),
+    linear-gradient(180deg, var(--bg), var(--bg-2));
+  color: var(--ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--brand-teal);
+  color: #0b0c0e;
+}
+
+.bcso-shell {
+  background: 
+    radial-gradient(circle at top center, rgba(249, 115, 22, 0.05), transparent 35%),
+    linear-gradient(180deg, var(--brand-navy-deep), #161B22 100%);
+}
+
+.bcso-topbar {
+  background: rgba(11, 15, 19, 0.95);
+  border-color: rgba(249, 115, 22, 0.12);
+}
+
+.bcso-panel {
+  background: rgba(28, 33, 40, 0.95);
+  border: 1px solid rgba(249, 115, 22, 0.15);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px -10px rgba(0,0,0,0.4);
+}
+
+.bcso-soft-panel {
+  background: rgba(22, 27, 34, 0.8);
+  border: 1px solid rgba(249, 115, 22, 0.1);
+}
+
+.bcso-gold-ring {
+  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.2), 0 0 20px rgba(245, 158, 11, 0.1);
+}
+
+.bcso-logo-plate {
+  background: white;
+  border: 1px solid var(--line);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.bcso-grid {
+  background-image: 
+    linear-gradient(rgba(249, 115, 22, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(249, 115, 22, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ---------- typography helpers ---------- */
+.font-display {
+  font-family: var(--font-anton), "Arial Narrow", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+.mono {
+  font-family: var(--font-mono), ui-monospace, monospace;
+}
+.mono-label {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 11px;
+  color: var(--muted);
+}
+.outline-text {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.55);
+}
+.outline-amber {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--accent);
+}
+
+/* ---------- surfaces ---------- */
+.panel {
+  background: linear-gradient(180deg, var(--panel), var(--bg-2));
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+.grid-bg-fine {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+.hazard-stripes {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--accent) 0 10px,
+    #0b0c0e 10px 20px
+  );
+}
+.glow-amber {
+  box-shadow: 0 0 0 1px rgba(249, 115, 22, 0.4), 0 0 44px rgba(249, 115, 22, 0.18);
+}
+
+/* ---------- form controls (dark) ---------- */
+.field {
+  width: 100%;
+  background: rgba(11, 15, 19, 0.8);
+  border: 1px solid rgba(249, 115, 22, 0.15);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.field:focus {
+  border-color: rgba(249, 115, 22, 0.7);
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+}
+.field::placeholder {
+  color: #565b64;
+}
+select.field option {
+  background: #161B22;
+  color: var(--ink);
+}
+textarea.field {
+  min-height: 84px;
+  resize: vertical;
+  line-height: 1.55;
+}
+
+/* ---------- buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-mono), monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 13px 22px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.btn:active {
+  transform: translateY(1px) scale(0.99);
+}
+.btn-primary {
+  background: var(--brand-teal);
+  color: #fff;
+  font-weight: 700;
+}
+.btn-primary:hover {
+  box-shadow: 0 8px 32px rgba(249, 115, 22, 0.3);
+  transform: translateY(-1px);
+}
+.btn-ghost {
+  background: transparent;
+  border-color: rgba(249, 115, 22, 0.2);
+  color: var(--ink);
+}
+.btn-ghost:hover {
+  border-color: var(--brand-teal);
+  color: var(--brand-teal-soft);
+}
+.btn-danger:hover {
+  border-color: rgba(239, 68, 68, 0.6) !important;
+  color: #ff7b7b !important;
+}
+.btn[disabled] {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+/* ---------- marquee ---------- */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 42s linear infinite;
+}
+
+@keyframes scanPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(248, 197, 87, 0.52); }
+  50% { box-shadow: 0 0 0 10px rgba(248, 197, 87, 0); }
+}
+.scan-pulse {
+  animation: scanPulse 1.8s ease-out infinite;
+}
+
+/* ---------- scrollbar ---------- */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #0b0c0e; }
+::-webkit-scrollbar-thumb { background: #23272e; border-radius: 6px; border: 2px solid #0b0c0e; }
+::-webkit-scrollbar-thumb:hover { background: #33383f; }
+
+/* ---------- paper document ---------- */
+.paper {
+  background: var(--paper);
+  color: #181a1d;
+}
+.paper .rule {
+  border-color: #d9d6cd;
+}
+.doc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+.doc-table th,
+.doc-table td {
+  border: 1px solid #d9d6cd;
+  padding: 8px 10px;
+  vertical-align: top;
+  text-align: left;
+}
+.doc-table th {
+  background: #f1efe8;
+  font-family: var(--font-mono), monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 10px;
+  color: #55575c;
+}
+.sig-line {
+  border-bottom: 1px solid #181a1d;
+  height: 44px;
+}
+
+.nobreak {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+@media print {
+  body {
+    background: #fff !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-page {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+  @page {
+    size: A4 landscape;
+    margin: 9mm;
+  }
+}
+/* ==========================================================================
+   BAHAMAS MINISTRY COMPLIANCE & ACCESSIBILITY DESIGN EXTENSIONS
+   ========================================================================== */
+
+/* 1. Enhanced Visibility Action Buttons (Top Navigation Headers) */
+.btn, 
+.bcso-topbar .btn,
+header .btn {
+  padding: 14px 28px !important;  /* Significantly larger click & touch target */
+  font-size: 13.5px !important;    /* Boosted text readability */
+  font-weight: 700 !important;
+  border-radius: 12px !important;  /* Cleaner, more solid appearance */
+  transition: all 0.2s ease-in-out;
+}
+
+/* 2. Unified Light Paper Document & Invoice Typography Tones */
+.paper,
+.paper *,
+.InvoiceDoc,
+.InvoiceDoc * {
+  color: #1a1a2e !important;       /* Strict, unified dark-slate print color */
+  font-family: var(--font-sans), system-ui, sans-serif !important;
+}
+
+/* Fix for specific table header rows on printed vouchers */
+.doc-table th {
+  background: #f1efe8 !important;
+  color: #4b5563 !important;       /* Clean, cohesive contrasting tone */
+  font-weight: 700 !important;
+}
+
+/* 3. Global Hyperlink Removal Across All Official Document Layouts */
+.paper a,
+.InvoiceDoc a,
+.ComplianceCertificate a,
+.ShieldReport a {
+  pointer-events: none !important; /* Disables the click link action */
+  text-decoration: none !important; /* Removes link underlines */
+  color: inherit !important;        /* Strips link color back to normal text style */
+}
+
+/* Force links to hide their background symbols during device printing */
+@media print {
+  .paper a[href]::after {
+    content: "" !important;
+  }
+}
